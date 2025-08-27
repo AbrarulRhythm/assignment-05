@@ -39,11 +39,11 @@ for (const callButton of callButtons) {
             return;
         }
 
+        alert(`📞 Calling ${title} ${number}...`);
+
         const totalNewCoin = totalCoin - 20;
 
         document.getElementById('coin-count').innerText = totalNewCoin;
-
-        alert(`📞 Calling ${title} ${number}...`);
 
         const historyData = {
             serviceTitle: title,
@@ -82,3 +82,24 @@ document.getElementById('clear-button').addEventListener('click', function () {
     callHistoryData = [];
     showHistory();
 })
+
+// Copy Button Functionality
+const copyButtons = document.getElementsByClassName('copy-button');
+
+for (const copyButton of copyButtons) {
+    copyButton.addEventListener('click', function () {
+        const card = copyButton.closest('.emergency-number-card');
+        const number = card.querySelector('.emergency-number').innerText;
+
+        const totalCopyCount = getInnerText('copy-count');
+
+        // copy number
+        navigator.clipboard.writeText(number);
+
+        alert(`Number copied to: ${number}`);
+
+        const totalNewCopyCount = totalCopyCount + 1;
+
+        document.getElementById('copy-count').innerText = totalNewCopyCount;
+    });
+}

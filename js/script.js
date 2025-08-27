@@ -76,3 +76,9 @@ function showHistory() {
         historyContainer.appendChild(div);
     }
 }
+
+// History clear button functionality
+document.getElementById('clear-button').addEventListener('click', function () {
+    callHistoryData = [];
+    showHistory();
+})

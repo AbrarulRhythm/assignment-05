@@ -52,5 +52,24 @@ for (const callButton of callButtons) {
         }
 
         callHistoryData.push(historyData);
+
+        // History Record
+        const historyContainer = document.getElementById('all-history-wrap');
+        historyContainer.innerText = "";
+
+        for (const data of callHistoryData) {
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <div class="bg-[#FAFAFA] p-4 rounded-lg flex justify-between items-center mb-2">
+                    <div>
+                        <h1 class="font-Inter text-lg font-semibold mb-1">${data.serviceTitle}</h1>
+                        <span>${data.serviceNumber}</span>
+                    </div>
+                    <div class="time">${data.date}</div>
+                </div>
+            `;
+
+            historyContainer.appendChild(div);
+        }
     });
 }

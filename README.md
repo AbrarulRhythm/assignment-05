@@ -1,5 +1,12 @@
 # ASSIGNMENT-005
 
+### 🌐 [Click Here To See The Demo](https://abrarulrhythm.github.io/assignment-05/)
+<br>
+
+<img width="1200" height="784" alt="Image" src="https://github.com/user-attachments/assets/96788447-6a4e-4edf-9d14-960c9046edf9" />
+<br>
+<br>
+
 #### ✅ Question 01: What is the difference between **getElementById**, getElementsByClassName, and querySelector / querySelectorAll?
 **Answer:**
 <br>
@@ -64,3 +71,9 @@ Stops the browser from performing its default behavior for an event (like submit
 Stops event bubbling.
 <br>
 Prevents the event from propagating to parent elements in the DOM
+
+# ⚙️ Technology Stack
+
+- HTML
+- CSS
+- JavaScript
